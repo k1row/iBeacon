@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29212C59-6D86-48BC-9DBD-808485B76FB6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AirTrack</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE981BB6-664E-463C-B7AD-DB62053BF45A</key>
+		<string>ssh://github.com/k1row/AirTrack.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iPhoneApp/AirTrack.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE981BB6-664E-463C-B7AD-DB62053BF45A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/k1row/AirTrack.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE981BB6-664E-463C-B7AD-DB62053BF45A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE981BB6-664E-463C-B7AD-DB62053BF45A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AirTrack</string>
+		</dict>
+	</array>
+</dict>
+</plist>

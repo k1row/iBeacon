@@ -1,0 +1,54 @@
+//
+//  HttpRequest.m
+//  Beacon
+//
+//  Created by Keiichiro Nagashima on 2014/06/02.
+//  Copyright (c) 2014年 Keiichiro Nagashima. All rights reserved.
+//
+
+#import "HttpRequest.h"
+
+@interface HttpRequest ()<NSURLConnectionDataDelegate>
+//@property(nonatomic) NSMutableData *requestData;
+//@property(nonatomic) NSURLConnection *connection;
+@end
+
+
+@implementation HttpRequest
+
+- (id)init
+{
+    self = [super init];
+    if(self != nil) {
+       //self.requestData = [[NSMutableData alloc] initWithCapacity:0];
+    }
+    
+    return self;
+}
+
+
+- (void)send:(GpsData*)gpsdata
+{
+    NSURL* url = [NSURL URLWithString:@"http://pacific-eyrie-5378.herokuapp.com/api/v1/gps"];
+    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    NSURLSession* session = [NSURLSession sessionWithConfiguration:config];
+    
+    // postするテキスト
+    NSLog(@"緯度 %+.6f, 経度 %+.6f\n", gpsdata.latitude, gpsdata.longitude);
+    NSString *params = [NSString stringWithFormat:@"device_id=%@&device_token=%@&latitude=%+.6f&longitude=%+.6f", gpsdata.device_id, gpsdata.device_token,gpsdata.latitude, gpsdata.longitude];
+
+    NSData* data = [params dataUsingEncoding:NSUTF8StringEncoding];
+    
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = data;
+    NSURLSessionDataTask* task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                // 完了時の処理
+                                                [session invalidateAndCancel];
+                                            }];
+    
+    [task resume];
+}
+
+@end

@@ -1,0 +1,6 @@
+platform :ios, '6.0'
+pod 'AFNetworking', '~> 2.0'
+pod 'AFNetworkActivityLogger', '~> 2.0'
+pod 'MagicalRecord'
+pod 'CocoaLumberjack'
+pod 'Facebook-iOS-SDK', '~> 3.0'
